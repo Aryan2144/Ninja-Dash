@@ -42,7 +42,7 @@ function setup() {
   bg = createSprite(300, 200)
   bg.addImage("bg", bgImg);
   bg.scale = 1.12;
-  bg.velocityX = -(2 + 3*score/100);
+  bg.velocityX = -(2 + 2*score/100);
   
   ninja = createSprite(70, 250);
   ninja.addAnimation("ninja", ninjaImg);
@@ -83,7 +83,7 @@ function draw() {
         }
 
       score = score + Math.round(getFrameRate()/60);
-      bg.velocityX = -(2 + 3*score/100);
+      bg.velocityX = -(2 + 2*score/100);
 
       
       if(keyDown("SPACE"))
@@ -180,7 +180,7 @@ function spawnObstacles()
       obstacle = createSprite(600, 317, 10, 10);
       obstacle.addImage("ob", obstacleImg);
       obstacle.scale = 0.7;
-      obstacle.velocityX = -(6 + 3*score/100);
+      obstacle.velocityX = -(6 + 2*score/100);
       obstacle.lifetime = 200;
       obstacleG.add(obstacle);
     }
@@ -193,7 +193,7 @@ function spawnStar1()
       star1 = createSprite(600, 250);
       star1.addImage("star", starImg);
       star1.scale = 0.07;
-      star1.velocityX = -(3 + 3*score/100);
+      star1.velocityX = -(3 + 2*score/100);
       star1.lifetime = 200;
       starG1.add(star1);
     }
@@ -204,7 +204,7 @@ function spawnStar2()
       star2 = createSprite(90, 250);
       star2.addImage("star", starImg);
       star2.scale = 0.07;
-      star2.velocityX = (3 + 3*score/100);
+      star2.velocityX = (3 + 2*score/100);
       star2.lifetime = 200;
       starG2.add(star2);
 }
@@ -216,7 +216,7 @@ function reset()
   starG1.destroyEach();
   ninja.addAnimation("ninja", ninjaImg);
   gameOver.visible = false;  
-  bg.velocityX = -(2 + 3*score/100);
+  bg.velocityX = -(2 + 2*score/100);
   starCount = 10;
   score = 0;
   //starG1.velocityX = -(3 + 3*score/100); 
